@@ -10,25 +10,35 @@ import android.content.SharedPreferences;package com.example.abdalim.abdielalim.
  * Created by amikom on 28/09/2018.
  */
 
-public class PrefrenceHelper {
-    private static PrefrenceHelper INSTANCE;
-    private SharedPreferences = Context
-    .getApplicationContext()
-    .getSharedPrefrences("simple.android.app", Context.MODE_PRIVATE);
-    )
-    public static PrefrenceHelperINSTANCE(Context context){
-        if (INSTANCE == null){
-            INSTANCE == PrefrenceHelper (context);
-        }
-    return INSTANCE;
+public class PreferencesHelper {
+    private static PreferencesHelper INSTANCE;
+    private SharedPreferences sharedPreferences;
+
+    private PreferencesHelper(Context context) {
+        sharedPreferences = context
+                .getApplicationContext()
+                .getSharedPreferences("simple.android.app", Context.MODE_PRIVATE);
     }
-    public SharedPreferences Pref(){
-        return SharedPreferences;
+    public static PreferencesHelper getInstance(Context context){
+        if (INSTANCE == null){
+            INSTANCE = PreferencesHelper (Context);
+        }
+        return INSTANCE;
+    }
+    public SharedPreferences Pref() {
+        return sharedPreferences;
     }
     public Boolean isLogin(){
-    return SharedPreferences.getBoolen()
+        return sharedPreferences.getBoolean("isLogin", false);
     }
-
-
+    public void setLogin(boolean isCall){
+        sharedPreferences.edit() .putBoolean("isLogin", isCall).apply();
+    }
+    public void setName (String isName){
+        sharedPreferences.edit().putString("isName", isName).apply();
+    }
+    public String getName(){
+        return sharedPreferences.getString("isName" "");
+    }
 
 }
