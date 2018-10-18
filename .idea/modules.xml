@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\yonnnas\belajar-android-git\app\app.iml" filepath="E:\yonnnas\belajar-android-git\app\app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/belajar-android-git.iml" filepath="$PROJECT_DIR$/belajar-android-git.iml" />
-      <module fileurl="file://E:\yonnnas\belajar-android-git\yonnas.iml" filepath="E:\yonnnas\belajar-android-git\yonnas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/belajarandroidgit.iml" filepath="$PROJECT_DIR$/belajarandroidgit.iml" />
     </modules>
   </component>
 </project>
